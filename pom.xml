@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.trollworks.gcs</groupId>
+    <artifactId>gcs</artifactId>
+    <version>4.13.5</version>
+    <name>gcs</name>
+    <description>GURPS Character Sheet</description>
+    <properties>
+        <maven.compiler.target>13</maven.compiler.target>
+        <maven.compiler.source>13</maven.compiler.source>
+        <maven.compiler.release>13</maven.compiler.release>
+        <java.version>13</java.version>
+    </properties>
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>resources</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>13</release>
+                    <compilerArgs>
+                        --enable-preview
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <developers>
+        <developer>
+            <name>Richard A. Wilkes</name>
+            <email>wilkes@me.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/rickosborne/gcs.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/rickosborne/gcs.git</developerConnection>
+        <url>https://github.com/rickosborne/gcs.git</url>
+        <tag>master</tag>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>github-rickosborne-gcs</id>
+            <name>GitHub rickosborne/toolkit Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/rickosborne/gcs</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>github-rickosborne-gcs</id>
+            <name>GitHub rickosborne/toolkit Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/rickosborne/gcs</url>
+        </repository>
+    </distributionManagement>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>net.sf.trove4j</groupId>
+            <artifactId>trove4j</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.trollworks.toolkit</groupId>
+            <artifactId>toolkit</artifactId>
+            <version>5.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lowagie</groupId>
+            <artifactId>itext</artifactId>
+            <version>2.1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>2.0.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>fontbox</artifactId>
+            <version>2.0.17</version>
+        </dependency>
+    </dependencies>
+</project>

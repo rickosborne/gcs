@@ -10,7 +10,7 @@
  */
 
 open module com.trollworks.gcs {
-    requires com.lowagie.text;
+    requires itext;  // sigh
     requires java.datatransfer;
     requires org.apache.fontbox;
 

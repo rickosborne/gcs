@@ -3,3 +3,6 @@
 /*.dmg
 /*.msi
 /*.deb
+/*.iml
+/.idea
+/target
